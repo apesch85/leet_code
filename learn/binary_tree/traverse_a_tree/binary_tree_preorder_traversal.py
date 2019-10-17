@@ -27,16 +27,3 @@ class Solution(object):
         :type root: TreeNode
         :rtype: List[int]
         """
-        if not root:
-            return
-        
-        final = [root.val]
-        
-        if root.left:
-            print 'root found [L]'
-            final.extend(self.preorderTraversal(root.left))
-        if root.right:
-            print 'root found [R]'
-            final.extend(self.preorderTraversal(root.right))
-            
-        return final

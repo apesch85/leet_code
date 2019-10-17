@@ -25,16 +25,3 @@ class Solution(object):
         :type root: TreeNode
         :rtype: List[int]
         """
-
-        if not root:
-            return
-        
-        tree_vals = []
-        if root.left:
-            tree_vals.extend(self.inorderTraversal(root.left))
-        tree_vals.append(root.val)
-        if root.right:
-            tree_vals.extend(self.inorderTraversal(root.right))
-        
-            
-        return tree_vals
