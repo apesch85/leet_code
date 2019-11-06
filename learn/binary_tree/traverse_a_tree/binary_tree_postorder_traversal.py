@@ -25,26 +25,3 @@ class Solution(object):
         :type root: TreeNode
         :rtype: List[int]
         """
-        
-        if root is None:
-            return
-        
-        stack = []
-        stack2 = []
-        result = []
-        
-        stack.append(root)
-        
-        while stack:
-            node = stack.pop()
-            stack2.append(node)
-            if node.left:
-                stack.append(node.left)
-            if node.right:
-                stack.append(node.right)
-        
-        while stack2:
-            node = stack2.pop()
-            result.append(node.val)
-
-        return result
